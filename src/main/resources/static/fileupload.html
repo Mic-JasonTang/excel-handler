@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fileupload.js"></script>
+</head>
+<body>
+    <form id="fileuploadfrom" enctype="multipart/form-data" action="/excel/upload" method="post">
+        <h1 align="center">文件上传</h1>
+        <hr>
+        <table align="center" border="1">
+            <tr>
+                <td>请选择文件:</td>
+                <td><input type="file" name="file" id="file" onchange="selectFile(this)"/></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td><input type="submit" id="upload" value="上传"/></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
