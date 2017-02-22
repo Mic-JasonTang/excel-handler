@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>文件上传</title>
+    <link type="text/css" rel="stylesheet" href="css/fileupload.css">
     <script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/fileupload.js"></script>
 </head>
 <body>
+    <div align="center">
     <form id="fileuploadfrom" enctype="multipart/form-data" action="/excel/upload" method="post">
         <h1 align="center">文件上传</h1>
         <hr>
-        <table align="center" border="1">
+        <table id="mytable" cellspacing="0" >
             <tr>
-                <td>请选择文件:</td>
-                <td><input type="file" name="file" id="file" onchange="selectFile(this)"/></td>
+                <th scope="col" abbr="Configurations" class="nobg">文件上传</th>
+                <th scope="col" abbr="Dual 1.8">上传文件</th>
             </tr>
             <tr>
-                <td colspan="1"></td>
-                <td><input type="submit" id="upload" value="上传"/></td>
+                <th scope="row" abbr="Frontside bus" class="spec">选择文件</th>
+                <td>
+                    <a href="javascript:;" class="a-upload">
+                        <input type="file" name="" >选择文件
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" abbr="L2 Cache" class="specalt">上传文件</th>
+                <td class="alt">
+                    <a href="javascript:;" class="button" id="uploadButton">上传
+                        <!--<input type="button" name="" >-->
+                    </a>
+                </td>
             </tr>
         </table>
-
+        <span class="fileerrorTip"></span>
+        <span class="showFileName"></span>
     </form>
+    </div>
 </body>
 </html>
